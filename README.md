@@ -1,36 +1,32 @@
-# MyArrayList - Custom Java Collection Framework
+# My Java Collection Framework
 
-## 📌 Overview
+This project is a custom implementation of the Java Collection Framework, providing a foundation for data structures like ArrayList, LinkedList, and Deques.
 
-MyArrayList is a custom implementation of Java's `ArrayList`. It is designed to function similarly to Java's built-in `ArrayList` with essential methods such as adding, removing, and retrieving elements while maintaining dynamic resizing capabilities.
+## Features
+- **Custom List Interface** (`MyList<E>`) with essential methods like `add()`, `remove()`, and `getFirst()`.
+- **Iterator Support** using `MyIterator<E>`.
+- **Dynamic Resizing** in `MyArrayList<T>`.
+- **Future Additions**: LinkedList, ArrayDeque, LinkedListQueue.
 
-## 🚀 Features
+## Class Structure
+- `core.MyIterator<E>`: Custom iterator for traversing collections.
+- `core.MyIterable<T>`: Interface defining iterable behavior.
+- `core.MyList<E>`: Interface extending `MyIterable<T>`.
+- `surface.MyArrayList<T>`: Implementation of `MyList<E>` using a dynamically resizing array.
 
-- **Dynamic Resizing**\*: Automatically expands when needed.\*
-- **Efficient Insertions & Deletions**\*: Supports **`addFirst`**, **`addLast`**, **`removeFirst`**, **`removeLast`**, and indexed operations.\*
-- **Iterator Support**\*: Implements a custom iterator to traverse elements.\*
-- **Exception Handling**\*: Handles edge cases like accessing an empty list.\*
+## Usage Example
+```java
+MyArrayList<Integer> list = new MyArrayList<>();
+list.add(10);
+list.add(20);
+System.out.println(list); // Output: [10, 20]
+```
 
-## 🏗️ Class Structure
+## Future Improvements
+- Implement `MyLinkedList<T>`.
+- Add `MyArrayDeque<T>`.
+- Optimize memory usage and performance.
 
-### `MyArrayList<T>`\* (Main Class)\*
-
-- `add(T e)`\*\*: Adds an element to the end.
-- `addFirst(T e)`\*\*: Adds an element at the beginning.
-- `addLast(T e)`\*\*: Alias for **`add()`**.
-- `add(T e, int index)`\*\*: Adds an element at a specific index.
-- `getFirst()`\*\*, **`getLast()`**: Retrieves first and last elements.
-- `removeFirst()`\*\*, **`removeLast()`**: Removes first and last elements.
-- `myiterator()`\*\*: Returns an iterator for traversal.
-- `toString()`\*\*: Pretty representation of the list contents.
-
-### `MyArrayListIterator<T>`\* (Nested Class)\*
-
-- Implements **`MyIterator<T>`** to provide a simple iterator over the list.
-
-## 🛠️ Usage Example
-
-## 📜 License
-
-This project is open-source and free to *use under the MIT License.*
+## License
+This project is open-source and free to use.
 
