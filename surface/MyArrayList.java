@@ -9,7 +9,7 @@ public class MyArrayList<T> implements MyList<T> {
     private int size;
     private int capacity;
     private T[] arr;
-
+    
     @SuppressWarnings("unchecked")
     public MyArrayList() {
         this(10);
